@@ -1,0 +1,20 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	cin.tie(NULL);
+	ios_base::sync_with_stdio(false);
+
+	long long int N,K;
+	cin >> N>>K;
+	long long int su[N+1];
+	for(int i=0;i<N;i++)
+		cin >> su[i];
+		
+	sort(su,su+N);
+	
+	cout << su[K-1];
+	
+	return 0;
+}

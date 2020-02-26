@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int gbs(int n,int k)
+{
+	if (n<k)
+		return gbs(k,n);
+	if(k==0)
+		return n;
+	return gbs(k,n%k);
+}
+
+int main() {
+	cin.tie(NULL);
+	
+	int T;
+	cin >> T;
+	
+	for(int i=0;i<T;i++)
+	{
+		int a,b,c;
+		cin>>a>>b;
+		c=gbs(a,b);
+		cout << (a/c)*(b/c)*c<<'\n';
+	}
+	return 0;
+}

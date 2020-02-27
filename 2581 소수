@@ -1,0 +1,42 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+
+int sosu[10001]={0, };
+
+void gett(int m, int n) // 0이 소수고 1이 아닌거임ㅋㅋ
+{
+	sosu[1]=1;
+	for(int i=2;i<=sqrt(n);i++)
+	{
+		if(sosu[i]==0)
+			for(int p=2; i*p<=n;p++)
+				sosu[i*p]=1;
+	}
+}
+
+int main() {
+	cin.tie(NULL);
+	ios_base::sync_with_stdio(false);
+
+	int m,n;
+	long long int total=0;
+	long long verymin=10001;
+	cin >> m >> n;
+
+	gett(m,n);
+
+	for(int p=m;m<=n;m++)
+		if(sosu[m]==0)
+		{
+			total+=m;
+			if(verymin>m)
+				verymin=m;
+		}
+	if(total==0)
+				cout <<"-1";
+		else
+			cout<<total<<"\n"<<verymin;
+	return 0;
+}

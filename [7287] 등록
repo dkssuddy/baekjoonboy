@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main()
+{
+	printf("22\n");
+	printf("vyrjsgml");
+	return 0;
+}

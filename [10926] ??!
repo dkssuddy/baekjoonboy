@@ -1,0 +1,10 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+	char N[50];
+	cin >> N;
+	cout << N <<"\?\?\!";
+	return 0;
+}

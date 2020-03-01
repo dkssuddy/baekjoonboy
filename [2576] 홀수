@@ -1,0 +1,24 @@
+#include <iostream>
+#include <algorithm>
+#define MODULAR 100007
+
+using namespace std;
+int main() {
+	int minOdd=101,totalOdd=0,Odd;
+	
+	for(int i=0;i<7;i++)
+	{
+		cin >> Odd;
+		if(Odd%2==1)
+		{
+			totalOdd+=Odd;
+			if(minOdd>Odd)
+				minOdd=Odd;
+		}
+	}
+	if(minOdd==101)
+	cout << "-1";
+	else
+	cout << totalOdd <<'\n'<<minOdd;
+	return 0;
+}

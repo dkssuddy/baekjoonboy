@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int main()
+{
+	int bassy=0,dassy=0,dassy1,dassy2;
+	int bass[3],dasy[3],john[3];
+	cin >> bass[0] >> bass[1];
+	cin >> dasy[0] >> dasy[1];
+	cin >> john[0] >> john[1];
+	if(abs(john[0]-bass[0])>abs(john[1]-bass[1]))
+		bassy=john[0]-bass[0];
+	else
+		bassy=john[1]-bass[1];
+	if (bassy<0)
+		bassy =-1*bassy;
+
+	dassy1= abs(john[1]-dasy[1]);
+	dassy2= abs(john[0]-dasy[0]);
+	
+	dassy=dassy1+dassy2;
+	if(dassy>bassy)
+		cout << "bessie";
+	else if (dassy< bassy)
+		cout << "daisy";
+	else
+		cout << "tie";
+}

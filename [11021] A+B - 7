@@ -1,0 +1,13 @@
+#include <stdio.h>
+int a, b,T, i=1;
+int main()
+{
+	scanf("%d", &T);
+	while (i < T+1)
+	{
+		scanf("%d%d", &a, &b);
+		printf("Case #%d: %d\n",i,a + b);
+		i++;
+	}
+	return 0;
+}

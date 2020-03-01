@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+
+int main(){
+	int S,K,H,min=100;
+	cin >> S>>K>>H;
+	min = S;
+	if(min>K)
+		min=K;
+	if(min>H)
+		min=H;
+	if(S+K+H>=100)
+		cout << "OK";
+	else{
+		if(min==H)
+			cout << "Hanyang";
+		if(min==K)
+			cout << "Korea";
+		if(min==S)
+			cout << "Soongsil";
+	}
+	return 0;
+}

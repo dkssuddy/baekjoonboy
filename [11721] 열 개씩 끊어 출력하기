@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	cin.tie(NULL);
+	ios_base::sync_with_stdio(false);
+	
+	char lang[101];
+	cin >> lang;
+	
+	for(int i=0;; i++)
+	{
+		if(i>101)
+			break;
+		if( lang[i]==NULL )
+			break;
+		cout << lang[i];
+		if((i+1) % 10 == 0)
+			cout <<'\n';
+	}
+	return 0;
+}

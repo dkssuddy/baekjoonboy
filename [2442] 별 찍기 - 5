@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main()
+{
+	int a, i, k, p, b, c, d;
+	scanf("%d", &a);
+	for (i = 1; i < a + 1; i++)
+	{
+		p = a - i;
+		k = 2 * i - 1;
+		for (b = 0; b < p; b++)
+			printf(" ");
+		for (d = 0; d < k; d++)
+			printf("*");
+		printf("\n");
+	}
+	return 0;
+}

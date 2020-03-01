@@ -1,0 +1,14 @@
+#include <stdio.h>
+int N,X,tmp,i=0;
+int main()
+{
+	scanf("%d %d", &N, &X);
+	while (i < N)
+	{
+		scanf("%d", &tmp);
+		i++;
+		if (tmp<X)
+			printf("%d ", tmp);
+	}
+    return 0;
+}

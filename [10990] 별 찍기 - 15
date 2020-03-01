@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+void sas(int n,int p)
+{
+	if(n==1)
+	{
+		for(int k=0;k<p-1;k++)
+			cout << " ";
+		cout <<"*"<< endl;
+	}else
+  {
+	for(int k=p-n;k>0;k--)
+		cout <<" ";
+	cout << "*";
+	for(int k=0; k<2*n-3;k++)
+		cout << " ";
+	cout << "*" << endl;
+	}
+}
+
+int main() {
+	int N;
+	cin >> N;
+	for(int i=1;i<N+1;i++)
+		sas(i,N);
+	return 0;
+}

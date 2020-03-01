@@ -1,0 +1,8 @@
+#include <stdio.h>
+char C;
+int main()
+{
+
+	while (scanf("%c", &C) != EOF)
+		printf("%c", C);
+}

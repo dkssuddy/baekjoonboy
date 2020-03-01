@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+	int a,b,c,ao,bo,co,ans=0;
+	cin >> a>>b>>c;
+	cin >> ao>>bo>>co;
+	
+	if(a<ao)
+		ans+=ao-a;
+	if(b<bo)
+		ans+=bo-b;
+	if(c<co)
+		ans+=co-c;
+	
+	cout << ans;
+}

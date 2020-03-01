@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
+	
+	int N,M,K;
+  
+	cin >> N >> M;
+  
+	int point[N+1][M+1]={0, };
+	
+	for(int i=0;i<N;i++)
+	{
+		for(int k=0;k<M;k++)
+			cin >>point[i][k];
+	}
+  
+	cin >> K;
+  
+	for(int t=0;t<K;t++)
+	{
+		int i,j,x,y,Ans=0;
+    
+		cin >> i >> j >> x >> y;
+    
+		for(int k=i-1;k<=x-1;k++)
+		{
+			for(int p=j-1;p<=y-1;p++)
+				Ans+=point[k][p];
+		}
+		cout << Ans << '\n';
+	}
+	return 0;
+}

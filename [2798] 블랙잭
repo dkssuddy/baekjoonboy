@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int N,M,ANS=0,big=0;
+	cin >> N;
+	int a[N]={0, };
+	cin >> M;
+  
+	for(int i=0;i<N;i++)
+		cin >> a[i];
+	for(int i=0;i<N;i++)
+	{
+		for(int k=i+1;k<N;k++)
+		{
+			for(int p=k+1;p<N;p++)
+			{
+				if(M>=(a[i]+a[k]+a[p]))
+				{
+					big=a[i]+a[k]+a[p];
+					if(ANS<big)
+						ANS=big;
+				}
+			}
+		}
+	}
+  
+	cout << ANS;
+	
+	return 0;
+}

@@ -1,0 +1,37 @@
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+using namespace std;
+int ans=0;
+
+void cha(char n)
+{
+
+}
+
+int main() {
+	int N,M,tru,ans=0;
+	cin >>N;
+	for(int i=0;i<N;i++)
+	{
+		tru=0;
+		cin >> M;
+		if(M==1)
+			tru=1;
+		
+		for(int i=2;i<=sqrt(M);i++)
+		{
+
+			if(M%i==0)
+			{
+				tru=1;
+				break;
+			}
+		}
+		if(M==2)
+			tru=0;
+		if(tru==0)
+			ans++;
+	}
+	cout << ans;
+}

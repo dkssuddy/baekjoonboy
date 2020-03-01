@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int ASD;
+int main()
+{
+	scanf("%c", &ASD);
+	printf("%d", ASD);
+	return 0;
+}

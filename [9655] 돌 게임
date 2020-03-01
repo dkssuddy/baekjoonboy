@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	bool sangwin=1;
+	int N;
+	
+	cin >> N;
+	if(N%2==0)
+		sangwin =0;
+
+	cout << (sangwin? "SK" : "CY");
+	return 0;
+}

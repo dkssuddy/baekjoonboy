@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int cache[1001];
+
+int abp(int n)
+{
+	if(cache[n])
+		return cache[n];
+	if(n==1)
+		return 1;
+	if(n==2)
+		return 2;
+	if(abp(n-1) && abp(n-2))
+		{
+			cache[n]=(abp(n-1)+abp(n-2))%10007;
+			return (abp(n-1)+abp(n-2))%10007;
+		}
+}
+int main() {
+	cin.tie(NULL);
+	
+	cache[1]=1;
+	cache[2]=2;
+	int n;
+	cin >> n;
+	cout << abp(n);
+	return 0;
+}

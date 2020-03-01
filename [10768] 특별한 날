@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int A,B;
+	cin >> A >> B;
+	
+	if(A==2 && B==18)
+		{
+			cout << "Special";
+			return 0;
+		}
+	if(A==2 && B>18)
+		{
+			cout << "After";
+			return 0;
+		}else if(A==2 && B<18)
+			{
+				cout << "Before";
+				return 0;
+			}
+	if(A<2)
+		cout << "Before";
+	else
+		cout << "After";
+
+	return 0;
+}

@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int count=0;
+
+void ans(int n)
+{
+	for(int i=1;i<n+1;i++)
+		{
+			int a,b,c;
+		a=i/100;
+		b=i/10-a*10;
+		c=i%10;
+		if(i<100)
+			count++;
+		else
+			if(a-b==b-c)
+				count++;
+		}
+		
+}
+
+int main() {
+	int n;
+	cin >>n;
+	ans(n);
+	cout << count;
+	
+	return 0;
+}

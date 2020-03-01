@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int ThirdNum1, ThirdNum2=0;
+	int Ans1, Ans2, Ans3, Ans4=0;
+	cin >> ThirdNum1 >> ThirdNum2;
+	Ans1=ThirdNum1*(ThirdNum2%10);
+	Ans2=ThirdNum1*((ThirdNum2/10)%10);
+	Ans3=ThirdNum1*(ThirdNum2/100);
+	Ans4=ThirdNum1*ThirdNum2;
+	cout << Ans1 <<endl;
+	cout << Ans2 <<endl;
+	cout << Ans3 <<endl;
+	cout << Ans4;
+	return 0;
+}

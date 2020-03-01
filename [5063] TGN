@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+	int r, e, c, N,a=1;
+	scanf("%d", &N);
+
+	while (a <= N)
+	{
+		scanf("%d %d %d", &r,&e,&c);
+		a++;
+		if (r + c<e)
+			printf("advertise\n");
+		if (r + c == e)
+			printf("does not matter\n");
+		if (r + c>e)
+			printf("do not advertise\n");
+	}	
+}

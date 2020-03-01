@@ -1,0 +1,31 @@
+#include <iostream>
+
+#define MAX 1000+1
+#define MODULAR 10007
+using namespace std;
+
+int isSave[MAX][MAX];
+
+void startSave(int N)
+{
+    for(int i=1;i<=N;i++)
+    {
+        isSave[i][0]=1;
+        isSave[i][i]=1;
+     }
+}
+int main()
+{
+    int N,K;
+    cin >> N >> K;
+    
+    startSave(N);
+    
+    for(int i=2; i <= N ;i++)
+        for(int k=1; k <= N ; k++)
+              isSave[i][k] = (isSave[i-1][k] + isSave[i-1][k-1]) % MODULAR;
+    
+    cout << isSave[N][K] % MODULAR;
+    return 0;
+    
+}

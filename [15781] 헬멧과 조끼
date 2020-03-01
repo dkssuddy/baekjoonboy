@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	int N,M;
+	int maxh=0,maxj=0;
+	cin >>N >>M;
+	for(int i=0;i<N;i++)
+	{
+		int p=0;
+		cin >> p;
+		if(p>maxh)
+			maxh=p;
+	}
+	for(int i=0;i<M;i++)
+	{
+		int p=0;
+		cin >> p;
+		if(p>maxj)
+			maxj=p;
+	}
+	
+	cout << maxh+maxj;
+	return 0;
+}

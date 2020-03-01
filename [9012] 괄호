@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	int T;
+	cin >> T;
+	
+	for(int i=0;i<T;i++)
+	{
+		char manx[60]={0, };
+		cin >> manx;
+		int combo=1;
+		
+			for(int i=0;combo>=1;i++)
+			{
+				if( manx[i]=='(' )
+					combo++;
+				else if( manx[i]==')' )
+					combo--;
+				else
+					break;
+			}
+		if(combo==1)
+			cout << "YES\n";
+		else
+			cout << "NO\n";
+	}	
+	return 0;
+}

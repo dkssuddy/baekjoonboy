@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main()
+{
+	int a, b, c, d, e, f, g, h, i, j, k, l;
+	
+	scanf("%d %d %d %d %d %d %d %d %d %d %d %d", &a, &b, &c, &d, &e, &f, &g, &h, &i, &j, &k, &l);
+	
+	if (a+b+c+d==0)
+		printf("D\n");
+	if (a + b + c + d == 1)
+		printf("C\n");
+	if (a + b + c + d == 2)
+		printf("B\n");
+	if (a + b + c + d == 3)
+		printf("A\n");
+	if (a + b + c + d == 4)
+		printf("E\n");
+	if (e + f + g + h == 0)
+		printf("D\n");
+	if (e + f + g + h == 1)
+		printf("C\n");
+	if (e + f + g + h == 2)
+		printf("B\n");
+	if (e + f + g + h == 3)
+		printf("A\n");
+	if (e + f + g + h == 4)
+		printf("E\n");
+	if (i + j + k + l == 0)
+		printf("D\n");
+	if (i + j + k + l == 1)
+		printf("C\n");
+	if (i + j + k + l == 2)
+		printf("B\n");
+	if (i + j + k + l == 3)
+		printf("A\n");
+	if (i + j + k + l == 4)
+		printf("E\n");
+    return 0;
+}

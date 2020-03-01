@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+	int lineCnt, c = 0;
+	int a = 0;
+	scanf("%d", &lineCnt);
+	
+	for (a = 0; a < lineCnt; a++)
+	{
+		for (c = 0; c<= a; c++)
+			printf("*");
+		printf("\n");
+	}
+	return 0;
+}

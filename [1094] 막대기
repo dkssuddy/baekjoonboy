@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int i = 0;
+
+int hehe(int a)
+{
+	int moc=a/2;
+	int namogi=a%2;
+	if( a==1 )
+		return 1;
+	if(namogi==1)
+		i++;
+	if (moc==1)
+	{
+		i++;
+		return i;
+	}
+	return hehe(a/2);
+}
+
+int main() {
+	cin.tie(NULL);
+	ios::sync_with_stdio(false);
+	
+	int X;
+	cin >> X;
+	cout << hehe(X);
+	
+	return 0;
+} 

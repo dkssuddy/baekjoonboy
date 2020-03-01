@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int sang(int a){
+	int H, T, O;
+	H=a/100;
+	T=(a/10)%10;
+	O=a%10;
+	return O*100+T*10+H;
+}
+
+int main() {
+	cin.tie(NULL);
+	ios_base::sync_with_stdio(false);
+	
+	int A,B,C,D;
+	cin >>A >> B;
+	C=sang(A);
+	D=sang(B);
+	if (C>D)
+		cout << C;
+	else
+		cout << D;
+	return 0;
+}

@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int T;
+	cin.tie(0);
+	cout.tie(0);
+	ios_base::sync_with_stdio(false);
+	
+	cin >> T;
+	for(int i=0; i<T; i++)
+	{
+		int n,m;
+		unsigned long long int ans=1;
+		cin >> n >> m;
+		if(abs(m-n)<n)
+			n=abs(m-n);
+		for(int k=0;k<n;k++)
+			ans=(m-k)*ans;
+		for(int p=0;p<n;p++)
+			ans=ans/(n-p);		
+		cout <<ans<<'\n';
+	}
+}

@@ -1,0 +1,28 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+#include <vector>
+#include <string>
+using namespace std;
+
+int main() {
+	cin.tie(NULL);
+	ios_base::sync_with_stdio(false);
+	
+	int su[4];
+	char word[4];
+	for(int i=0;i<3;i++)
+		cin >> su[i];
+	sort(su,su+3);
+	cin >> word;
+	for(int i=0;i<3;i++)
+	{
+		if(word[i]=='A')
+			cout << su[0]<<" ";
+		else if(word[i]=='B')
+			cout << su[1]<<" ";
+		else
+			cout << su[2]<<" ";
+	}
+	return 0;
+}

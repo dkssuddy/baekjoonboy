@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int N;
+	cin >>  N;
+	for(int i=0; i<N;i++)
+  {
+	  for(int space=N-i-1; space>0;space--)
+	    cout << ' ';
+	  for(int star=0; star<2*i+1;star++)
+	  	cout << '*';
+	  cout << endl;
+	}
+	for(int p=N-1; p>0;p--)
+  {
+		for(int space=p; space<N; space++)
+			cout << ' ';
+		for (int star=2*p-1; star>0; star--)
+			cout << '*';
+		cout << endl;
+	}
+	return 0;
+}

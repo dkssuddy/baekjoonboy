@@ -1,0 +1,31 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+#include <vector>
+using namespace std;
+
+int main() {
+	cin.tie(NULL);
+	ios_base::sync_with_stdio(false);
+	
+	char number[8];
+	int su[11]{0, };
+	int max=0,max69;
+	cin >> number;
+  
+	for(int i=0;number[i] !='\0';i++)
+		su[(int)number[i]-48]++;
+    
+	for(int i=0;i<10;i++)
+	{
+		if(i==6 || i==9)
+			continue;
+		if(max<su[i])
+			max=su[i];
+	}
+	max69=(su[6]+su[9]+1)/2;
+	
+	cout << (max69 >= max ? max69 : max );
+		
+	return 0;
+}

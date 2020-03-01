@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int ans=0;
+
+void cha(char n)
+{
+	if(n=='A' || n=='B' || n=='C')
+		ans+=3;
+	if(n=='D' || n=='E' || n=='F')
+		ans+=4;
+	if(n=='G' || n=='H'|| n=='I')
+		ans+=5;
+	if(n=='J' || n=='K' || n=='L')
+		ans+=6;
+	if(n=='M' || n=='N'|| n=='O')
+		ans+=7;
+	if(n=='P' || n=='Q' || n=='R' || n=='S')
+		ans+=8;
+	if(n=='T' || n=='U' || n=='V')
+		ans+=9;
+	if(n=='W' || n=='X' || n=='Y' || n=='Z')
+		ans+=10;
+}
+
+int main() {
+	char name[17]={0, };
+	cin >> name;
+	for(int i=0;i<17;i++)
+	{
+		if(name[i]=='\n')
+			break;
+		cha(name[i]);
+	}
+	cout << ans;
+}

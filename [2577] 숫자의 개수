@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int A, B, C,D,k=0;
+	int Num[10]={0, };
+	cin >> A >> B >> C;
+	D=A*B*C;
+	for(int i=0;;)
+  {
+		if (D/10==0)
+    {
+			k=D%10;
+			Num[k]++;
+			break;
+		}
+		k = D%10;
+		D = D/10;
+		Num[k]++;
+	}
+	
+	for(int i=0; i<10;i++)
+		cout << Num[i] <<endl;
+	return 0;
+}

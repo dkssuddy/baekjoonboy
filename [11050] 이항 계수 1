@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+	int N,K,ANS=1;
+	cin >> N>>K;
+	
+	for(int i=0;i<K;i++)
+		ANS=ANS*(N-i);
+	for(int i=0;i<K;i++)
+		ANS=ANS/(K-i);
+	
+	cout << ANS;
+	return 0;
+}

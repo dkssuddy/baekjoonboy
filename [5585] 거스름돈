@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+	long long int money;
+	long long int ans=0;
+	cin >> money;
+	
+	money=1000-money;
+
+	for(;money>=500;)
+		{
+			money-=500;
+			ans++;
+		}
+	for(;money>=100;)
+		{
+			money-=100;
+			ans++;
+		}
+	for(;money>=50;)
+		{
+			money-=50;
+			ans++;
+	}
+	for(;money>=10;)
+		{
+			money-=10;
+			ans++;
+		}
+    for(;money>=5;)
+		{
+			money-=5;
+			ans++;
+		}
+	for(;money>=1;)
+		{
+			money-=1;
+			ans++;
+		}
+	cout << ans;
+	return 0;
+}

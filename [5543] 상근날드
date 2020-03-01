@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	cin.tie(NULL);
+	ios::sync_with_stdio(false);
+	int sang,jung,ha,ham,water;
+	int cola, sider;
+	cin >> sang >> jung >> ha >> cola >> sider;
+	if(sang<=jung &sang<=ha)
+		ham= sang;
+	if(jung<=sang &jung<=ha)
+		ham= jung;
+	if(ha<=jung &ha<=sang)
+		ham= ha;
+	water = cola>sider ? sider : cola;
+	cout << water+ham-50;
+}

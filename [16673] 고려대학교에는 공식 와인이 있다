@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int C,K,P,ans;
+	cin >> C >> K>>P;
+	ans=(C*(C+1)/2)*K+(C*(C+1)*(2*C+1)/6)*P;
+	cout << ans;
+	return 0;
+}

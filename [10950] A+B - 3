@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int T,A,B, i=0;
+int main()
+{
+	scanf("%d", &T);
+	while (i < T)
+	{
+		scanf("%d%d",&A,&B);
+		printf("%d\n", A + B);
+		i++;
+	}
+	return 0;
+}

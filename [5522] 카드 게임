@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	int k,ANS=0;
+	for(int i=0;i<5;i++)
+	{
+		cin >> k;
+		ANS+= k;
+	}
+	cout << ANS;
+	return 0;
+}

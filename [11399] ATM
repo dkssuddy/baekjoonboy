@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	cin.tie(NULL);
+	ios_base::sync_with_stdio(false);
+  
+	int N,temp,ANS=0;
+	int ASN=0;
+	cin >> N;
+	int tt[N]={0, };
+	if (1>N || N>1000)
+		return 0;
+	for(int i=0; i<N; i++)
+		cin >> tt[i];
+    
+	for(int i=0; i<N-1; i++)
+  {
+		for(int j=i+1; j<N; j++)
+    {
+			if (tt[i]>tt[j])
+      {
+				temp = tt[i];
+				tt[i]= tt[j];
+				tt[j]= temp;
+			}
+		}
+	}
+	for(int i=0;i<N;i++){
+		ASN=ASN+tt[i];
+		ANS= ANS+ASN;
+	}
+	cout << ANS;
+	return 0;
+}

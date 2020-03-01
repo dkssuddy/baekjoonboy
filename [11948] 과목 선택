@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+
+int main(){
+	int k[6],ANS=0;
+	int min=100;
+	for(int i=0;i<6;i++)
+	{
+		cin >> k[i];
+		ANS+= k[i];
+		if(i<4 && k[i]<min)
+			min=k[i];
+	}
+	if(k[4]>k[5])
+		ANS=ANS-k[5];
+	else
+		ANS=ANS-k[4];
+	cout << ANS-min;
+	return 0;
+}

@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	cin.tie(NULL);
+	ios::sync_with_stdio(false);
+	
+	int fib[42];
+	fib[0]=0;
+	fib[1]=1;
+	for(int i=0;i<39;i++)
+		fib[i+2]=fib[i]+fib[i+1];
+	
+	int T,N;
+	cin >> T;
+	for(int q=0;q<T;q++)
+	{
+		cin >> N;
+		if(N==0)
+			cout << '1'<<' '<< '0'<< '\n';
+		else
+		  cout << fib[N-1] << ' ' << fib[N] <<'\n';		
+	}
+	return 0;
+}

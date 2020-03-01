@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int YakSu(int a, int b){
+	if(b==0) {
+		return a;
+	}else{ 
+		return YakSu(b,a%b);
+	}
+}
+
+int main() {
+	int A,B,ANS=0;
+	cin >> A >> B;
+	
+	ANS = YakSu(A,B);
+	
+	cout << ANS << endl;
+	cout << A*B/ANS;
+	return 0;
+}

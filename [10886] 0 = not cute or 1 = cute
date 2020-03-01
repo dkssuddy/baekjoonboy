@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+	int T=0,F=0,N,M;
+	cin >> N;
+	for(int i=0;i<N;i++)
+	{
+		cin >> M;
+		if(M==1)
+			T++;
+		if(M==0)
+			F++;
+	}
+	if(T>F)
+		cout << "Junhee is cute!";
+	else
+		cout << "Junhee is not cute!";
+	return 0;
+}

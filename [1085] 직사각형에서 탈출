@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+
+	int x,y,w,h,xans,yans;
+
+	scanf("%d %d %d %d", &x,&y,&w,&h);
+	if (x <= w - x)
+		xans = x;
+	else xans = w - x;
+	if (y < h - y)
+		yans = y;
+	else yans = h - y;
+	if (yans <= xans)
+		printf("%d", yans);
+	else printf("%d", xans);
+	return 0;
+}

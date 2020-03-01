@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main()
+{
+	int ANS = 1, c, NUM;
+	scanf("%d", &NUM);
+	for (c = 1; c <= NUM; c++)
+		ANS *= c;
+	printf("%d", ANS);
+	return 0;
+}

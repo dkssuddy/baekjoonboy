@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main(void) {
+	int N,temp=0;
+	int Su[1001];
+	cin >> N;
+	for(int i=0;i<N;i++){
+		cin >> Su[i];
+	}
+	for(int i=0;i<N;i++){
+		for(int k=i+1;k<N;k++){
+			if (Su[i]>Su[k]){
+				temp=Su[i];
+				Su[i]=Su[k];
+				Su[k]=temp;
+			}
+		}
+	}
+	for(int i=0;i<N;i++){
+		cout << Su[i] <<endl;
+	}
+	return 0;
+}

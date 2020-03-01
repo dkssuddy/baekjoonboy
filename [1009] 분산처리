@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	cin.tie(NULL);
+	ios::sync_with_stdio(false);
+	
+	int T,a,b,ANS;
+	cin >> T;
+	
+	for(int i=0; i<T;i++)
+	{
+		cin >> a >> b;
+		ANS=1;
+		if(a%10==0)
+			ANS=10;
+		else
+		  for(int k=0; k<b;k++)
+			  ANS=(ANS*a)%10;
+		cout << ANS << endl;
+	}
+}

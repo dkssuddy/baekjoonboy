@@ -1,0 +1,54 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+
+int main() {
+	cin.tie(NULL);
+	ios_base::sync_with_stdio(false);
+
+	
+	int N,garo=0,sero=0;
+	cin >> N;
+	char point[N+1][N+1];
+	
+	for(int y=0;y<N;y++)
+	{
+		for(int x=0;x<N;x++)
+			cin >> point[x][y];
+	}
+	
+	for(int y=0;y<N;y++) //가로검색
+	{
+		for(int x=0;x<N-1;x++)
+		{
+			if(point[x][y]=='.' && point[x+1][y]=='.')
+			{
+				garo++;
+				while(point[x][y]=='.')
+					x++;
+				if(point[x][y]=='X')
+					continue;
+				break;
+			}
+		}
+	}
+
+	for(int x=0;x<N;x++) //세로검색
+	{
+		for(int y=0;y<N-1;y++)
+		{
+			if(point[x][y]=='.' && point[x][y+1]=='.')
+			{
+				sero++;
+				while(point[x][y]=='.')
+					y++;
+				if(point[x][y]=='X')
+					continue;
+				break;
+			}
+		}
+	}
+	cout << garo << " " << sero;
+	return 0;
+}

@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(void) {
+	int R1,R2=0;
+	float S,Cs=0;
+	scanf("%d %f", &R1,&S);
+	Cs= S-R1;
+	R2= Cs+S;
+	printf("%d", R2);
+	return 0;
+}

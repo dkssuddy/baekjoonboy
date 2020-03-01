@@ -1,0 +1,27 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
+  
+	char si[16];
+	int V,ACount=0,BCount=0;
+	cin >> V >> si;
+	for(int i=0; si[i] !='\0';i++)
+	{
+		if(si[i]=='A')
+			ACount++;
+		else
+			BCount++;
+	}
+	if(ACount==BCount)
+		cout << "Tie";
+	else if( ACount>BCount)
+		cout <<"A";
+	else
+		cout << "B";
+	return 0;
+}

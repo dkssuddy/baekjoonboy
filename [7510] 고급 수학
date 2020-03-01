@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int N,a,b,c,ans=0;
+	cin >> N;
+	for(int i=0; i<N; i++)
+	{
+		ans=0;
+		cin >> a>>b>>c;
+		if(a*a==b*b+c*c || b*b==a*a+c*c || c*c==a*a+b*b)
+			ans=1;
+		cout << "Scenario #" << i+1 <<":" <<endl;
+		if(ans==1)
+			cout << "yes" <<endl <<endl;
+		else
+			cout << "no" << endl << endl;
+	}
+}

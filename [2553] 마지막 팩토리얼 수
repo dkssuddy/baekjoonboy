@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	long long N,Ans=1;
+	cin >> N;
+	for(int i=1;i<=N;i++)
+	{
+		Ans *=i;
+		Ans= Ans%1000000000000;
+		while(Ans%5==0)
+			Ans =Ans/10;
+	}
+	cout << Ans%10 << '\n';
+	return 0;
+}

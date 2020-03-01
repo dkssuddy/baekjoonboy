@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void) {
+	int C;
+	scanf("%d", &C);
+	for(int i=0;i<C;i++){
+		int N,total=0;
+		int NOP=0;
+		float ave,answer=0;
+		scanf("%d", &N);
+		int score[N];
+		for(int k=0;k<N;k++)
+    {
+			scanf("%d", &score[k]);
+			total += score[k];
+		}
+		ave = (float)total/N;
+		for(int y=0;y<N;y++)
+			if(score[y]>ave)
+				NOP++;
+		answer = 100*(float)NOP/N;
+		printf("%.3f\%\n",answer);
+	}
+}

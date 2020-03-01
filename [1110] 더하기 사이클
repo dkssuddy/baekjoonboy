@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+	int point,N,Ans,i=0;
+	int check;
+	
+	scanf("%d", &N);
+	
+	point = N;
+	
+	do
+	{
+		int p = point / 10;
+		int k = point % 10;
+		check=p + k;
+		point=(check % 10)+10*k;
+		i++;
+		Ans = !(N == point);
+	} while (Ans);
+	printf("%d", i);
+}

@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	
+	int Hour,Min=0;
+	int AHour, AMin=0;
+  
+	cin >> Hour >> Min;
+  
+	AMin=Min-45;
+  
+	if(AMin<0)
+	{
+		Hour--;
+		if(Hour<0)
+			Hour=23;
+		AMin=AMin+60;
+	}
+	cout << Hour << ' ' << AMin;
+	
+	return 0;
+}

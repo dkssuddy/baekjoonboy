@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	cin.tie(NULL);
+	ios::sync_with_stdio(false);
+	int Sum=0;
+	int Num[5];
+	for(int i=0;i<5;i++)
+	{
+		cin >> Num[i];
+		Sum=Sum+Num[i]*Num[i];
+	}
+	cout << Sum%10;
+}

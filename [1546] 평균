@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int N,M,Max=0;
+	double TotalPoint=0;
+	cin >> N;
+	double Point[N];
+	for (int i=0;i<N;i++)
+	{
+		cin >> Point[i];
+		if(Point[i]>Max)
+			Max=Point[i];
+	}
+	for(int i=0;i<N;i++)
+	{
+		Point[i]=Point[i]/Max*100;
+		TotalPoint=TotalPoint+Point[i];
+	}
+	cout.precision(5);
+	cout << TotalPoint/N;
+}

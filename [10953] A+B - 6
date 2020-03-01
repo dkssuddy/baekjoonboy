@@ -1,0 +1,13 @@
+#include <stdio.h>
+int a, b,T, i=0;
+int main()
+{
+	scanf("%d", &T);
+	while (i < T)
+	{
+		scanf("%d,%d", &a, &b);
+		printf("%d\n", a + b);
+		i++;
+	}
+	return 0;
+}

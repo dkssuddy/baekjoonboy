@@ -1,0 +1,13 @@
+#include <iostream> 
+using namespace std;
+
+int main()
+{
+  int a, b, c; 
+  cin >> a >> b >> c;
+
+  double max = a / (double)b * c; 
+  double min = a * (double)b / c;
+  cout << ((max > min) ? (long long)max : (long long)min);
+  return 0;
+}

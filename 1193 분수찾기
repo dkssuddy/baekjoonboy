@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
+	
+	long long int x,ans;
+	cin >>x;
+	int i;
+	for(i=1 ;; i++)
+		if( i*(i+1)/2>=x && i*(i-1)/2<x )
+				break;
+			
+	ans=x-(i*(i-1)/2);
+	if(i%2==0)
+		cout <<ans<<"/"<<i+1-ans;
+	else
+		cout <<i+1-ans <<"/"<<ans ;
+	return 0;
+}

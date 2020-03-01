@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+inline int vad(int Q,int W,int E){
+    if(Q*Q==W*W+E*E)
+        return 1;
+    else
+       return 0;
+}
+
+int main() {
+	for(;;)
+	{
+		int A,B,C,ans=0;
+		cin >> A >> B>> C;
+    if (A==0)
+       return 0;
+		if (vad(A,B,C))
+			ans =1;
+		else if(vad(B,A,C))
+			ans =1;
+		else if(vad(C,A,B))
+			ans =1;
+		else
+      ans =0;
+		if(ans==1)
+			cout << "right"<<endl;
+		else
+			cout << "wrong"<<endl;
+	}
+	return 0;
+}

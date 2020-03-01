@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    char word[101];
+    int len=0;
+    int really = 1;
+    
+    cin >> word;
+    
+    for(int i=0;i<101;i++)
+    {
+        if(word[i]=='\0')
+            break;
+        len++;
+    }
+    
+    for(int i=0; i<len;i++)
+    {
+        if(word[i]==word[len-1-i])
+            really=1;
+        else
+        {
+            really=0;
+            break;
+        }
+    }
+    if(really==1)
+        cout << "1";
+    else
+        cout << "0";
+   
+    return 0;
+}

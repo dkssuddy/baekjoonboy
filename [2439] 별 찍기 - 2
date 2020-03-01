@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+	int WL,i = 0;
+	scanf("%d", &WL);
+	int j = 0;
+	int k = WL;
+	int m = 0;
+	while (j < WL)
+	{
+		int p = WL - j-1;
+		while (m<p)
+		{
+			printf(" ");
+			m++;
+		}
+		while (i <= j)
+		{
+			printf("*");
+			i++;
+		}
+		printf("\n");
+		i = 0;
+		k = 0;
+		m = 0;
+		j++;
+	}
+    return 0;
+}

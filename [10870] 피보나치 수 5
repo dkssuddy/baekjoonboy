@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+	int Count;
+	scanf("%d", &Count);
+	int PBN[30] = {0, 1, };
+	int i = 0;
+	while (i < Count)
+	{
+		PBN[i + 2] = PBN[i] + PBN[i + 1];
+		i++;
+	}
+	printf("%d", PBN[Count]);
+}

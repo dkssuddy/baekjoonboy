@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main(void)
+{
+	int WantNum, i= 0;
+	scanf("%d", &WantNum);
+	int j = WantNum;
+	int k = WantNum;
+	for (i = 0; i < WantNum; i++)
+	{
+		for (; j>0; j--)
+		{
+			printf("*");
+		}
+		k--;
+		j = k;
+		printf("\n");
+	}
+	return 0;
+}

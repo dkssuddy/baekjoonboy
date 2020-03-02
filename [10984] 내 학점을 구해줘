@@ -1,0 +1,37 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int poll(int N)
+{
+	if(N==1)
+		return 1;
+	return poll(N-1)+N*N;
+}
+
+
+int main() {
+	cin.tie(NULL);
+
+	int T;
+	cin >> T;
+	for(int i=0;i<T;i++)
+	{
+		int N;
+		cin >> N;
+		int totpo=0;
+		float totgi=0;
+		cout.precision(1);
+		cout<<fixed;
+		for(int k=0;k<N;k++)
+		{
+			int po=0;
+			float gi=0;
+			cin >> po >> gi;
+			totpo +=po;
+			totgi +=po*gi;
+		}
+		cout << totpo <<" "<< totgi/totpo << "\n";
+	}
+	return 0;
+}

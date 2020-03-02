@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int N;
+	cin >> N;
+	for(int i=0;i<N;i++)
+	{
+		char helo[21];
+		cin >> helo;
+		for(int k=0;;k++)
+		{
+			if(helo[k]=='\0')
+				break;
+			if((int)helo[k]>64 && (int)helo[k]<91)
+				helo[k] = (int)helo[k]+32;
+		}
+		for(int k=0;;k++)
+		{
+			if(helo[k]=='\0')
+				break;
+			cout << helo[k];
+		}
+		cout <<"\n";
+	}
+	return 0;	
+}

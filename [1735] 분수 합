@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int gcd(int q, int w)
+{
+	if(w==0)
+		return q;
+	return gcd(w,q%w);
+}
+
+int main() {
+	long long int a,b,c,d,q,w,yask;
+	
+	cin >> a >> b >> c >> d;
+	
+	q=a*d+b*c;
+	w=b*d;
+	
+	if(q>w)
+		yask=gcd(q,w);
+	else
+		yask=gcd(w,q);	
+	
+	cout << q/yask <<" "<< w/yask;
+	
+	return 0;
+}

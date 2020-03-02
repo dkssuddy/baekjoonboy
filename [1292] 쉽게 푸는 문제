@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int line[2000];
+	int whatNum=1;
+	int newcount=0;
+	register int i=0;
+	
+	while(i<1001)
+	{
+		newcount = 0;		
+		while(whatNum>newcount)
+		{	
+			i++;
+			line[i]=whatNum;
+			newcount++;
+		}		
+		whatNum++;
+	}	
+	int A,B,ans=0;
+	cin >> A >> B;	
+	
+	for(int k=A;k<B+1;k++)
+		ans+=line[k];
+	cout << ans;
+	return 0;
+}

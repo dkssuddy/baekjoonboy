@@ -1,0 +1,15 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	int N;
+	cin >> N;
+	int ab[N+1];
+	for(int i=0;i<N;i++)
+		cin >> ab[i];
+	sort(ab,ab+N);
+	for(int i=0;i<N;i++)
+		cout << ab[i] <<"\n";
+	return 0;
+}

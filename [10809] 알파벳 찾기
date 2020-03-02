@@ -1,0 +1,23 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	cin.tie(NULL);
+
+	int wordWhere[27];
+  
+	for(int i=0;i<26;i++)
+		wordWhere[i]=-1;
+    
+	char word[101];
+	cin >> word;
+	
+	for(int i=0;word[i] !='\0';i++)
+		if(wordWhere[(int)word[i]-97] == -1)
+			wordWhere[(int)word[i]-97]=i;
+	for(int i=0;i<26;i++)
+		cout << wordWhere[i] << " ";
+	
+	return 0;
+}

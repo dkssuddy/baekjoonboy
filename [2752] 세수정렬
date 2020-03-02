@@ -1,0 +1,19 @@
+#include <iostream>
+#include <algorithm>
+#define MODULAR 100007
+
+using namespace std;
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(0); 
+	cout.tie(0);
+  
+	int su[4];
+	cin >>su[0]>>su[1]>>su[2];
+	
+	sort(su,su+3);
+	for(int i=0;i<3;i++)
+		cout << su[i] << " ";
+	
+	return 0;
+}

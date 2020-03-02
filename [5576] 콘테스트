@@ -1,0 +1,18 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+
+int main() {
+	int wong[12];
+	int korea[12];
+	for(int i=0;i<10;i++)
+		cin >>wong[i];
+	for(int i=0;i<10;i++)
+		cin >>korea[i];
+	sort(wong,wong+10);
+	sort(korea,korea+10);
+	wong[10]=wong[9]+wong[8]+wong[7];
+	korea[10]=korea[9]+korea[8]+korea[7];
+	cout << wong[10] << " "<< korea[10];
+}

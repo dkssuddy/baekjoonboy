@@ -1,0 +1,12 @@
+#include <iostream>
+#include <cmath>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+	cin.tie(NULL);
+	int S, T,D;
+	cin >> S >> T>>D;
+	cout << D/(2*S)*T;
+	return 0;
+}

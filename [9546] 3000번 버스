@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int T;
+	cin >> T;
+	for(int i=0;i<T;i++)
+	{
+		long long int k;
+		long long int ans=0;
+		cin >> k;
+		
+		for(int p=0;p<k;p++)
+		{
+			ans=(double)(ans+0.5)*2;
+		}
+		cout << ans << endl;
+	}
+	return 0;
+}

@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	int count=0;
+	while(1)
+	{
+		int a;
+		cin >> a;
+				if(a>0)
+			count++;
+		if(getchar()=='\n')
+			break;
+	}
+	cout << count;
+	return 0;
+}

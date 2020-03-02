@@ -1,0 +1,29 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	int isThree=0, isTen=0;
+	char N[100001];
+	int total=0;
+	int k=0;
+	cin >> N;
+	for(k=0;N[k] !='\0';k++)
+	{
+		total += (int)N[k]-48;
+		if(N[k]=='0')
+			isTen=1;
+	}
+	if(total%3==0)
+		isThree=1;
+		
+	sort(N,N+k);
+	if(isThree==1 && isTen==1)
+		{
+			for(int i=k-1;i>=0;i--)
+				cout << N[i];
+		}
+	else
+		cout << "-1";
+	return 0;
+}

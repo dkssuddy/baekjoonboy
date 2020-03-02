@@ -1,0 +1,29 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+
+using namespace std;
+
+int gcd(int q, int w)
+{
+	if(w==0)
+		return q;
+	return gcd(w,q%w);
+}
+
+int main() {
+	cin.tie(NULL);
+	cout.tie(NULL);
+	ios::sync_with_stdio(false);
+  
+	int N;
+	cin >> N;
+	int number[N];
+	for(int i=0;i<N;i++)
+		cin >> number[i];
+    
+	sort(number,number+N);
+  
+	for(int i=N-1;i>=0;i--)
+		cout << number[i] << '\n';
+}

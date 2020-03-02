@@ -1,0 +1,25 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+
+using namespace std;
+
+int gcd(int q, int w)
+{
+	if(w==0)
+		return q;
+	return gcd(w,q%w);
+}
+
+int main() {
+	char word[101];
+	cin >> word;
+	int base[123]={0, };
+	
+	for(int i=0;word[i] !='\0';i++)
+		base[(int)word[i]]++;
+	
+	for(int k=97;k<123;k++)
+		cout << base[k] << " ";
+	return 0;
+}

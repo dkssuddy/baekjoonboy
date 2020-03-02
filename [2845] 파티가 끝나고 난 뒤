@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int a,b;
+	int z,x,c,v,p;
+	
+	cin >> a >> b;
+	cin >> z >> x>>c>>v>>p;
+	cout << z-a*b << " "<<x-a*b<<" "<<c-a*b<<" "<<v-a*b<<" "<<p-a*b;
+	
+	return 0;
+	
+}

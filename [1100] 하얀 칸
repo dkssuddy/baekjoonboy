@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int count=0;
+	char chess[9];
+	for(int i=0;i<8;i++)
+	{
+		cin >> chess;
+		for(int k=0;k<8;k++)
+			{
+				if( chess[k]=='F' && k%2==0 && i%2==0)
+						count++;
+				if( chess[k]=='F' && k%2==1 && i%2==1)
+						count++;
+			}
+	}
+	cout << count;
+	return 0;
+}

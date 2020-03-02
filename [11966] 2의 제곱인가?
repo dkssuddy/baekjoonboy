@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	long long int T;
+	cin >> T;
+	
+	while(T>0)
+	{
+		if(T==1)
+			{
+			cout << "1";
+			break;
+		}
+		if(T%2==1)
+			{
+				cout << "0";
+				break;
+			}
+		T=T/2;
+	}
+	return 0;
+	
+}

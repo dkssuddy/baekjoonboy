@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int T;
+	cin >> T;
+	for(int i=0;i<T;i++)
+	{
+		int a[8];
+		int minimini=101;
+		int total=0;
+		for(int p=0;p<7;p++)
+		{
+			cin >> a[p];
+			if(a[p]%2==0)
+			{
+				total+=a[p];
+			if(minimini>a[p])
+				minimini=a[p];
+			}
+		}
+		cout << total <<" "<< minimini<<endl;
+	}	
+	return 0;	
+}

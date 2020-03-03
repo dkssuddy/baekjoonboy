@@ -1,0 +1,41 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+
+using namespace std;
+
+int cache[10001]={0, };
+
+void start()
+{
+	for(int i=1;i<=100;i++)
+		cache[i*i]=1;
+}
+
+int main() {
+	cin.tie(NULL);
+	ios_base::sync_with_stdio(false);
+	
+	int M,N,vMin=100000;
+	long long int total=0;
+	cin >> M >> N;
+	
+	start();
+	
+	for(int i=M;i<=N;i++)
+	{
+		if(cache[i]==1)
+		{
+			total+=i;
+			if(i<vMin)
+				vMin=i;
+		}
+	}
+	
+	if ( total==0)
+		cout  << "-1";
+	else
+		cout << total << '\n' << vMin;
+	
+	return 0;
+}

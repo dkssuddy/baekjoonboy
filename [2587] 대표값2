@@ -1,0 +1,19 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	
+	long long int total=0;
+	int num[5];
+	
+	for(int i=0;i<5;i++)
+	{
+		cin >> num[i];
+		total +=num[i];
+	}
+	sort(num,num+5);
+	cout << total/5 << '\n';
+	cout << num[2];
+	return 0;
+}

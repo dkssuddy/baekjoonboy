@@ -1,0 +1,40 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+#include <vector>
+#include <string>
+using namespace std;
+
+int main() {
+	cin.tie(NULL);
+	ios_base::sync_with_stdio(false);
+	
+	int total=0,twoSum,len[10];
+	
+	int i,k;
+	
+	for( int p=0 ; p<9 ; p++ )
+	{	
+		cin >> len[p];
+		total=len[p]+total;
+	}
+	for( i=0;i<8;i++)
+	{
+		for(k=i+1;k<9;k++)
+		{
+			twoSum=0;
+			twoSum=len[i]+len[k];
+			
+			if( total-100 == twoSum )
+			{
+					len[i]=0;
+					len[k]=0;
+						
+					sort(len,len+9);
+					for(int i=2;i<9;i++)	
+						cout << len[i] << '\n';
+					return 0;
+				}
+			}		
+		}
+  }

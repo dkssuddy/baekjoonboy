@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int T;
+	
+	cin >> T;
+	for(int i=0;i<T;i++)
+	{
+		int how,su,total=0;
+		cin >> how;
+		for(int k=0;k<how;k++)
+		{
+			su = 0;
+			cin >> su;
+			total+=su;
+		}
+		cout << total << endl;
+	}
+	
+	return 0;
+}

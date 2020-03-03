@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int T;
+	
+	cin >> T;
+	for(int i=0;i<T;i++)
+	{
+		int how,opt,optn,total=0;
+		cin >> total;
+		cin >> how;
+		for(int k=0;k<how;k++)
+		{
+			opt=0;
+			optn=0;
+			cin >> opt >> optn;
+			total = opt*optn + total;
+		}
+		cout << total << endl;
+	}
+	
+	return 0;
+}

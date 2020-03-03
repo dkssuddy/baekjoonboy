@@ -1,0 +1,33 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+#include <vector>
+#include <string>
+using namespace std;
+
+int cache[10001][2]={0, };
+
+void selfNum(int i)
+{
+	long int total=i;
+	while(i>=10)
+	{
+		total +=i%10; 
+		i=i/10;
+	}
+	total += i;
+	cache[total][1]=1;
+}
+int main() {
+	cin.tie(NULL);
+	ios_base::sync_with_stdio(false);
+	
+	for(int i=1;i<10001;i++)
+		selfNum(i);
+	
+	for(int i=1;i<10001;i++)
+		if(cache[i][1]==0)
+			cout << i << '\n';
+	
+	return 0;
+}

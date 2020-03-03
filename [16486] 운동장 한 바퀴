@@ -1,0 +1,17 @@
+#include <iostream>
+#include <algorithm>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main() {
+	
+	double ANS;
+	int d1,d2;
+	cin >> d1 >> d2;
+	cout.setf(ios::fixed);
+	cout.precision(6);
+	ANS=double( d1*2 + 2*d2*(3.141592));
+	cout << ANS;
+	return 0;
+}

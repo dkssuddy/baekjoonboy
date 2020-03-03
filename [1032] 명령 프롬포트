@@ -1,0 +1,28 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+int main() {
+	cin.tie(NULL);
+	ios_base::sync_with_stdio(false);
+	
+	int N;
+	cin >> N;
+	string rName;
+	cin >> rName;
+	
+	for(int i=0;i<N-1;i++)
+	{
+		string name;
+		cin >> name;
+		for(int k=0; name[k] !='\0' ; k++ )
+			if(name[k] != rName[k])
+				rName[k]='?';
+	}
+	cout  << rName;
+	return 0;
+}

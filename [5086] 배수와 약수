@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	
+	long long int total=0,su;
+	
+	for(;;)
+	{
+		int su1=0,su2=0;
+		cin >> su1 >> su2;
+		if( su1==0 && su2 == 0)
+			break;
+		if(su2%su1 == 0)
+			cout << "factor";
+		else if(su1%su2 == 0)
+			cout << "multiple";
+		else 
+			cout << "neither";
+		cout <<  '\n';
+		}
+	
+	return 0;
+}

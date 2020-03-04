@@ -1,0 +1,26 @@
+#include <iostream>
+#include <vector>
+#include <queue>
+using namespace std;
+
+int cache[10000001];
+
+void start()
+{
+	cache[0]=0;
+	cache[1]=5;
+	for(int i=2;i<10000001;i++)
+		cache[i] = (cache[i-1]+3*i+1) % 45678;
+}
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
+	
+	start();
+	long long int N;
+	cin >> N;
+	cout << cache[N];
+	
+	return 0;
+}

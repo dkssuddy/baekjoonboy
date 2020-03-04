@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cstring>
+#include <string>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int T;
+	cin >> T;
+	
+	for(int i=0;i<T;i++)
+	{
+		int N,nMax=0;
+		char nName[21];
+		cin >> N;
+		for(int p=0;p<N;p++)
+		{
+			char name[21];
+			int alc;
+			cin >> name >> alc;
+			if(alc>nMax)
+			{
+				nMax=alc;
+				strcpy(nName,name);
+			}
+		}
+		cout << nName<<'\n';
+	}
+	return 0;
+}

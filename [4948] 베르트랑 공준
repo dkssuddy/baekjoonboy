@@ -1,0 +1,37 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+
+int cache[250000]={0, };
+
+void start() // 0이 소수고 1이 아닌거임ㅋㅋ
+{
+	cache[1]=1;
+	for(int i=2;i<=500;i++)
+	{
+		if(cache[i]==0)
+			for(int p=2; i*p<250000;p++)
+				cache[i*p]=1;
+	}
+}
+
+int main() {
+	cin.tie(NULL);
+	ios_base::sync_with_stdio(false);
+	start();
+	
+	for(;;)
+	{
+		int n,count=0;
+		cin >> n;
+		if(n== 0) break;
+		for(int k=n+1;k<=2*n;k++)
+		{
+			if(cache[k]==0)
+				count++;
+		}
+		cout << count << '\n';
+	}
+	return 0;
+}

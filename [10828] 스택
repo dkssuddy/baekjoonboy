@@ -1,0 +1,51 @@
+#include <iostream>
+#include <vector>
+#include <queue>
+using namespace std;
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
+	
+	int N;
+	cin >> N;
+	char word[6];
+	
+	vector <long int> q={}; 
+	
+	for(int i=0;i<N;i++)
+	{
+		char word[6];
+		long int su=0;
+		cin >> word;
+		
+		if(word[1]=='u')
+		{
+			cin >> su;
+			q.push_back(su);
+		}else if(word[0]=='p' && word[1]=='o')
+		{	
+			if(q.size()==0)
+			{
+				cout << "-1" << '\n';
+				continue;
+			}
+			cout << q.back() <<'\n';
+			q.pop_back();
+		}
+		else if(word[1]=='i')
+			cout << q.size()<<'\n';
+		else if(word[1]=='m')
+			cout << q.empty()<<'\n';
+		else if(word[0]=='t')
+		{
+			if(q.size()==0)
+			{
+				cout << "-1" << '\n';
+				continue;
+			}
+			cout << q.back() << '\n';
+		}
+	}
+	return 0;
+}

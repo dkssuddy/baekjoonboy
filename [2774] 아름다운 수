@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int cache[101]={0, };
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	
+	int T;
+	cin >> T;
+	
+	for(int i=0;i<T;i++)
+	{
+		int beauty=0;
+		char X[11];
+		int su[11]={0, };
+		cin >> X;
+		
+		for(int i=0; X[i] != '\0'; i++)
+			su[(int)(X[i]-48)]++;
+		for(int p=0; p<10;p++)
+			if(su[p] != 0)
+					beauty++;
+		cout << beauty << '\n';		
+	}
+
+	return 0;
+	
+}

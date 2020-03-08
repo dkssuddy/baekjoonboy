@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+
+	int N;
+	cin >> N;
+	cin.ignore();
+	for(int k=1;k<=N;k++)
+	{
+		string word;
+		getline(cin,word);
+		cout << k<<". " << word <<"\n";
+	}
+} 

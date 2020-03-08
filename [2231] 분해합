@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	
+	int N,su[1000001]={0, };
+	
+	for(int k=10;k<999990;k++)
+	{
+		long long int total=k;
+		long long nam=k;
+		while(nam>=10)
+		{
+			int kam= nam;
+			nam=nam/10;
+			total+=kam%10;
+		}		
+		total+=nam;
+		if(total>1000001)
+			continue;
+		if(su[total]==0)
+			su[total]=k;
+	}
+	
+	cin >> N;
+	cout << su[N];
+	
+	return 0;
+} 

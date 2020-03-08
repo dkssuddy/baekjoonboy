@@ -1,0 +1,54 @@
+#include <iostream>
+#include <queue>
+using namespace std;
+
+int money1[7]={5000000,3000000,2000000,500000,300000,100000};
+int money2[6]={5120000,2560000,1280000,640000,320000};
+
+int reward1(int a)
+{
+	if (a==0) return 0;
+	if (a>21) return 0;
+	int i=1,count=0;
+	while(a>0)
+	{
+		a-=i;
+		i++;
+		count++;
+	}
+	return money1[count-1];
+}
+
+int reward2(int b)
+{
+	if(b==0) return 0;
+	if(b>31) return 0;
+	
+	int i=1,count=0;
+	while(b>0)
+	{
+		b-=i;
+		i*=2;
+		count++;
+	}
+	return money2[count-1];
+}
+
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	int T;
+	cin >> T;
+	
+	for(int i=0;i<T;i++)
+	{
+		int a,b,ANS=0;
+		cin >> a >> b;
+		
+		cout << reward1(a)+reward2(b) <<"\n";
+	}
+	
+	
+	return 0;
+}

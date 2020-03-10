@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+
+	for(;;)
+	{
+		int a,c,ans;
+		char what;
+		cin >> a >> what >> c;
+		if(a==0 && what=='W' && c==0)
+			break;
+		if(what=='W')
+			ans= a-c;
+		else if (what=='D')
+			ans= a+c;
+		if(ans<-200)
+			cout << "Not allowed";
+		else
+			cout << ans;
+		cout << "\n";
+	}
+	return 0;
+}

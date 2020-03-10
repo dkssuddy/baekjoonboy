@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	int totalStart=0,totalUlm=0;
+	bool loos=false;
+	
+	int Upoint[10];
+	int Spoint[10];
+	
+	for(int i=0;i<9;i++)
+		cin >> Upoint[i];
+	for(int i=0;i<9;i++)
+		cin >> Spoint[i];
+		
+	for(int i=0;i<9;i++)
+	{
+		int a=Upoint[i];
+		int b=Spoint[i];
+		totalUlm+=a;
+		if(totalUlm>totalStart)
+			loos=true;
+		cin >> b;
+		totalStart+=b;		
+	}	
+	cout << (loos==1?"Yes":"No");
+	return 0;
+}

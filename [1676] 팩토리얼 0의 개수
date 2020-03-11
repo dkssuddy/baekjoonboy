@@ -1,0 +1,26 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int n,count=0;
+	cin >> n;
+	
+	for(int i=5;i<=n;i+=5)
+	{
+		int a=i;
+		while(1)
+		{
+			a=a/5;
+			count++;
+			if( a % 5 != 0)
+				break;
+		}
+	}
+	cout << count;
+	return 0;
+}

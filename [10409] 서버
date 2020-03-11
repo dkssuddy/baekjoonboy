@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int n, T,total=0,count=0;
+	cin >> n >> T;
+	
+	int ill[n+1];
+	
+	for(int i=0;i<n;i++)
+		cin >> ill[i];
+		
+	for(int i=0;count !=n;i++)
+	{
+		total += ill[i];
+		if(total>T)
+			break;
+		else
+			count++;
+	}
+	
+	cout << count;
+	return 0;
+}

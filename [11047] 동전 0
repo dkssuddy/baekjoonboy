@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int n,count=0;
+	long long int k;
+	cin >> n >> k;
+	vector <long long int> coin;
+	for(int i=0;i<n;i++)
+	{
+		int a;
+		cin >> a;
+		coin.push_back(a);
+	}
+	
+	while(!coin.empty())
+	{
+		int a=coin.back();
+		count = count + k/a;
+		k = k%a;
+		coin.pop_back();
+	}
+	cout << count;
+	return 0;
+}

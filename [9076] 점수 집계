@@ -1,0 +1,26 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int T;
+	cin >> T;
+	for(int i=0;i<T;i++)
+	{
+		int point[6];
+		for(int k=0;k<5;k++)
+			cin >> point[k];
+		sort(point,point+5);
+		
+		if (point[3]-point[1] >= 4)
+			cout << "KIN\n";
+		else
+			cout << point[1]+point[2]+point[3]<<"\n";
+	}
+	
+	return 0;
+}

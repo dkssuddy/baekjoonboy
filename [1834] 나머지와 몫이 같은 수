@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	long long int N,tAns=0;
+	cin >> N;
+	
+	for(long long int i=1;i<N;i++)
+	{
+		long long int ans=i*N+i;
+		tAns+=ans;
+	}
+	cout << tAns;
+	return 0;
+}

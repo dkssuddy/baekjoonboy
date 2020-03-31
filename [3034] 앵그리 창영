@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int N,W,H;
+	cin >> N>>W>>H;
+	for(int i=0;i<N;i++)
+	{
+		int a;
+		cin >> a;
+		cout << (a*a<=(W*W+H*H)?"DA\n":"NE\n");
+	}
+	return 0;
+}

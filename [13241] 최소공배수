@@ -1,0 +1,25 @@
+
+#include <iostream>
+using namespace std;
+
+long long int gbs(long long int n,long long int k)
+{
+	if (n<k)
+		return gbs(k,n);
+	if(k==0)
+		return n;
+	return gbs(k,n%k);
+}
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	long long int a,b,c;
+	cin>>a>>b;
+	c=gbs(a,b);
+	cout << (a/c)*(b/c)*c<<'\n';
+
+	return 0;
+}

@@ -1,0 +1,26 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+#include <deque>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int N,K;
+	cin >>  N >> K;
+	
+	deque<int> ans;
+	
+	for(int i=1;i<=N;i++)
+		if(N%i==0)
+				ans.push_back(i);
+        
+	if(ans.size()<K)
+		cout << "0";
+	else
+		cout << ans.at(K-1);
+	return 0;
+}

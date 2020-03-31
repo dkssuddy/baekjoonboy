@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	long long pibo[70]={1,1,2,4,0, };
+	for(int i=4;i<70;i++)
+		pibo[i]=pibo[i-1]+pibo[i-2]+pibo[i-3]+pibo[i-4];
+		
+	int t;
+	cin >> t;
+	
+	while(t)
+	{
+		t--;
+		int n;
+		cin >> n;
+		cout << pibo[n]<<"\n";
+	}
+}

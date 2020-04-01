@@ -1,0 +1,24 @@
+#include <iostream>
+#include <deque>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int n;
+	cin >> n;
+	deque <int> Yaksu;
+	while(n)
+	{
+		n--;
+		int p;
+		cin >> p;
+		Yaksu.push_back(p);
+	}
+	sort(Yaksu.begin(),Yaksu.end());
+	cout << Yaksu.front()*Yaksu.back();
+	return 0;
+}

@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+void ans(int n)
+{
+	if(n==1)
+	{
+		cout<<1 << " bottle of beer on the wall, " <<1 <<" bottle of beer.\n";
+		cout <<"Take one down and pass it around, no more bottles of beer on the wall.\n\n";
+	}
+	else if (n==2)
+	{
+		cout<<n << " bottles of beer on the wall, " <<n <<" bottles of beer.\n";
+		cout <<"Take one down and pass it around, "<<n-1<<" bottle of beer on the wall.\n\n";
+	}
+	else
+	{
+		cout<<n << " bottles of beer on the wall, " <<n <<" bottles of beer.\n";
+		cout <<"Take one down and pass it around, "<<n-1<<" bottles of beer on the wall.\n\n";
+	}
+}
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int n;
+	cin >> n;
+	
+	for(int i=0;i<n;i++)
+		ans(n-i);
+    
+	if(n==1)
+	{
+		cout<<"No more bottles of beer on the wall, no more bottles of beer.\n";
+		cout<<"Go to the store and buy some more, "<<n <<" bottle of beer on the wall.\n\n";
+	}
+	else
+	{
+		cout<<"No more bottles of beer on the wall, no more bottles of beer.\n";
+		cout<<"Go to the store and buy some more, "<<n <<" bottles of beer on the wall.\n\n";
+	}
+	return 0;
+}

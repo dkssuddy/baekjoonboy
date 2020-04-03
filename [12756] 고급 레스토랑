@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int aAt,aLf,bAt,bLf;
+	cin >>aAt>>aLf>>bAt>>bLf;
+	while(bLf>0 && aLf>0)
+	{
+		aLf -= bAt;
+		bLf -= aAt;
+	}
+	if(bLf<=0 && aLf<=0)
+	{
+		cout << "DRAW";
+		return 0;
+	}
+	cout << (aLf<=0?"PLAYER B":"PLAYER A");
+	return 0;
+}

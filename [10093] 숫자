@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	long long int A,B;
+	cin >> A>>B;
+	if( A==B)
+	{
+		cout << "0";
+		return 0;
+	}
+	else if( A<B)
+	{
+		cout << B-A-1<<"\n";
+		for(int i=1;i<B-A;i++)
+			cout << A+i<<" ";
+	}
+	else
+	{
+		cout << A-B-1<<"\n";
+		for(int i=1;i<A-B;i++)
+			cout << B+i<<" ";	
+	}
+		return 0;
+}

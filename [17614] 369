@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int point(int n)
+{
+	int ans=0;
+	for(int i=1;i<=n;i++)
+	{
+		int a=i;
+		while(a>0)
+		{
+			int b;// a는 남은 수, b는 나머지;
+			b= a%10;
+			a= a/10;			
+			if(b%3 == 0 && b !=0)
+				ans++;
+		}
+	}
+	return ans;
+}
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int n;
+	cin >> n;
+	cout << point(n);
+	return 0;
+}

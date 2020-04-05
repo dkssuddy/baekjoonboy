@@ -1,19 +1,18 @@
-#include <stdio.h>
+#include <iostream>
+#include <cmath>
+using namespace std;
 
-int main()
+int main() 
 {
-
-	int x,y,w,h,xans,yans;
-
-	scanf("%d %d %d %d", &x,&y,&w,&h);
-	if (x <= w - x)
-		xans = x;
-	else xans = w - x;
-	if (y < h - y)
-		yans = y;
-	else yans = h - y;
-	if (yans <= xans)
-		printf("%d", yans);
-	else printf("%d", xans);
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int x,y,w,h,ans1,ans2,tans;
+	cin >> x >> y >>w >>h;
+	ans1 = (abs(w-x)>abs(x)?x:abs(w-x));
+	ans2 = (abs(h-y)>abs(y)?y:abs(h-y));
+	tans = (ans1>ans2?ans2:ans1);
+	cout << tans;
 	return 0;
 }

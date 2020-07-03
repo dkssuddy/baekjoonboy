@@ -1,0 +1,41 @@
+#include <iostream>
+#include <queue>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int visited[100001]={0,};
+	int N,K,count=0;
+	cin >>N >> K;
+	
+	queue <int> here;	
+	here.push(N);
+	
+	while(N != K)
+	{
+		int s = here.size();
+		
+		for(int i=0;i<s;i++)
+		{
+			N = here.front();
+			here.pop();
+			if( N<0 || 100001<N || visited[N]==1)
+				continue;
+			if(N==K)
+				break;
+			visited[N]=1;
+			here.push(N*2);
+			here.push(N+1);
+			here.push(N-1);
+		}
+		if(N==K)
+			break;
+		count++;
+	}
+	
+	cout << count;
+	return 0;
+}

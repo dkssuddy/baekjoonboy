@@ -1,0 +1,59 @@
+#include <iostream>
+#include <queue>
+#include <deque>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+  
+	deque <int> DFS;
+	queue <int> BFS;  
+	int N,M,V;			// 정점 N 간선 M 시작 V
+	cin >> N >> M >> V;
+	
+	int route[N+1][N+1]={0,};
+	int visited_dfs[N+1];
+	int visited_bfs[N+1];
+  
+	for(int i=0;i<M;i++)
+	{
+		int a,b;
+		cin >> a >> b;
+		route[a][b] = 1;
+		route[b][a] = 1;
+	}
+	
+	//DFS
+	DFS.push_front(V);
+	while(DFS.size())
+	{
+		int p= DFS.front();
+		DFS.pop_front();		
+		if(visited_dfs[p]==1)
+			continue;			
+		for(int i=N;i>0;i--)
+			if(route[p][i]==1)
+				DFS.push_front(i);
+		visited_dfs[p]=1;
+		cout << p <<" ";
+	}		
+	cout << "\n";
+		
+	//BFS
+	BFS.push(V);
+	while(BFS.size())
+	{
+		int k = BFS.front();
+		BFS.pop();
+		if(visited_bfs[k]==1)
+			continue;
+		for(int i=1;i<=N;i++)
+			if(route[k][i]==1)
+				BFS.push(i);
+		visited_bfs[k] =1;
+		cout << k <<  " ";
+	}	
+	return 0;
+}

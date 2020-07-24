@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(NULL);
+	cin.tie(NULL);
+	
+	int N,Q;
+	cin >> N >> Q;
+	int num[N+1][2] ={0,};
+	cin >> num[0][0];
+	
+	for(int i=1;i<N;i++)
+		{
+			cin >> num[i][0];
+			num[i][1]= abs(num[i][0] - num[i-1][0])+num[i-1][1];
+		}
+    
+	while(Q--)
+	{
+		int i,j;
+		cin >> i >> j;
+			cout << num[j-1][1]-num[i-1][1] << '\n';
+	}
+	
+	return 0;
+}

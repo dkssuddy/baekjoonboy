@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(NULL);
+	cin.tie(NULL);
+	
+	int N,M;
+	cin >> N >> M;
+	int num[N+1][2] ={0,};
+	cin >> num[0][0];
+	num[0][1]= num[0][0];
+	
+	for(int i=1;i<N;i++)
+		{
+			cin >> num[i][0];
+			num[i][1]= num[i][0] + num[i-1][1];
+		}
+	while(M--)
+	{
+		int i,j;
+		cin >> i >> j;
+		if (i==1)
+			cout << num[j-1][1] << '\n';
+		else	
+			cout << num[j-1][1]-num[i-2][1] << '\n';
+	}	
+	return 0;
+}

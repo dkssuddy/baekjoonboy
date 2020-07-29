@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(0);
+	cin.tie(NULL);
+	
+	int R,B,L,W;
+	cin >> R >> B;
+	
+	for(int i=3;;i++)
+		if((R+B)%i==0)
+		{
+			W=(R+B)/i;
+			if((W-2)*(i-2)==B)
+			{
+				cout << W << " " << i;
+				return 0;
+			}
+		}
+	return 0;
+}

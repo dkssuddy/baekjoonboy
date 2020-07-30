@@ -1,0 +1,35 @@
+#include <iostream>
+#include <deque>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	
+	deque <int> A,B;
+
+	int N,M;
+	cin >> N >> M;
+	
+	while(N--)
+	{
+		int a;
+		cin >> a;
+		A.push_front(a);
+	}
+	while(M--)
+	{
+		int a;
+		cin >> a;
+		B.push_front(a);
+	}
+	A.insert(A.end(),B.begin(),B.end());
+	sort(A.begin(),A.end());
+	while(A.size())
+	{
+		cout << A.front() << " ";
+		A.pop_front();
+	}
+	return 0;
+}

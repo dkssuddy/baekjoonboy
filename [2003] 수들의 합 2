@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	
+	int N,M,count=0;
+	cin >> N >> M;
+	long long int A[N+1][2];
+	cin >> A[0][0];
+	A[0][1]=A[0][0];
+	for(int i=1;i<N;i++)
+	{
+		cin >> A[i][0];
+		A[i][1]=A[i-1][1]+A[i][0];
+	}
+	for(int p=0;p<N;p++)
+	{
+		if(A[p][1]==M)
+			count++;
+		for(int k=p+1;k<N;k++)
+		{
+			if(M+A[p][1]<A[k][1])
+				break;
+			if(M+A[p][1]==A[k][1])
+			{
+				count++;
+				break;
+			}
+		}
+	}
+	cout << count;
+	return 0;
+}

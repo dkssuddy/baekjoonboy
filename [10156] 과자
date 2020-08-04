@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	int K,N,M;
+	cin >> K >> N >> M;
+	cout << (K*N>=M?K*N-M:0);
+}

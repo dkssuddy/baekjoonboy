@@ -1,0 +1,28 @@
+#include <iostream>
+#include <algorithm>
+#include <deque>
+using namespace std;
+
+int main()
+{
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	deque <int> su;
+	int N;
+	cin >> N;
+	while(N--)
+	{
+		int p;
+		cin >> p;
+		su.push_back(p);
+	}
+	sort(su.begin(),su.end());
+	while(su.size())
+	{
+		int k=su.front();
+		su.pop_front();
+		while(su.front()==k)
+			su.pop_front();
+		cout << k << " ";
+	}
+}

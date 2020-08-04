@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	int M,ans=1;
+	cin>> M;
+	while(M--)
+	{
+		int a,b;
+		cin >> a >> b;
+		if(a==ans)
+			ans=b;
+		else if(b==ans)
+			ans=a;
+		else
+			continue;
+	}
+	cout << ans;
+}

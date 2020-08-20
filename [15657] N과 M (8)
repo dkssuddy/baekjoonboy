@@ -1,0 +1,43 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int visited[9]={0,0, };
+int ans[9]={0,};
+vector <int> nums;
+
+void backT(int N, int M, int count)
+{
+	if(count==M)
+	{
+		for(int i=0;i<M;i++)
+			cout << ans[i] <<" ";
+		cout <<"\n";
+		return;
+	}
+	for(int k=0;k<N;k++)
+		if(ans[count-1]<=nums.at(k))
+		{
+			ans[count]=nums.at(k);
+			backT(N,M,count+1);
+		}
+}
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+
+	int N,M;
+	cin >> N >> M;
+	for(int p=0;p<N;p++)
+	{
+		int num;
+		cin  >> num;
+		nums.push_back(num);
+	}
+	sort(nums.begin(),nums.end());
+	backT(N,M,0);
+
+	return 0;
+}

@@ -1,0 +1,41 @@
+#include <iostream>
+#include <deque>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	
+	int N,count=0;
+	int num[1001]={0, };
+	int visited[1001]={0, };
+	deque <int> a;
+	cin >> N;
+	for(int k=0;k<N;k++)
+		cin >> num[k];
+	a.push_back(0);
+	while(a.size())
+	{
+		int p=a.size();
+		while(p--)
+		{
+			int t= a.front();
+			a.pop_front();
+			if(visited[t])
+				continue;
+			visited[t]=1;
+			if(t==N-1)
+			{
+				cout << count;
+				return 0;
+			}
+			else if(t>N-1)
+				continue;
+			for(int i=1;i<=num[t];i++)
+				a.push_back(t+i);
+		}
+		count++;
+	}
+	cout << "-1";
+	return 0;
+}

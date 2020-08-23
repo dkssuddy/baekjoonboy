@@ -1,0 +1,40 @@
+#include <iostream>
+#include <deque>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	
+	while(1)
+	{
+		int n,total=1;
+		deque <int> num;
+		cin >> n;
+		if(n==-1)
+			break;
+		for(int k=2;k<=sqrt(n);k++)
+			if(n%k==0)
+			{
+				num.push_back(k);
+				num.push_back(n/k);
+				total = total + n/k + k;
+			}
+		sort(num.begin(),num.end());
+		if(total==n)
+		{
+			cout << n <<" = 1";
+			while(num.size())
+			{
+				cout << " + " << num.front();
+				num.pop_front();
+			}
+			cout << '\n';
+		}
+		else
+			cout << n << " is NOT perfect.\n";
+	}
+	return 0;
+}

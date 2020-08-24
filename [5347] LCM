@@ -1,0 +1,29 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+long long int ans(long long int a,long long int b)
+{
+	if(a<b)
+		return ans(b,a);
+	if(b==0)
+		return a;
+	return ans(a%b,b);
+}
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int T;
+	cin >> T;
+	while(T--)
+	{
+		int a,b;	
+		cin >> a >> b;
+		long long int k=ans(a,b);
+		cout << (a/k)*b<<"\n";
+	}
+	return 0;	
+}

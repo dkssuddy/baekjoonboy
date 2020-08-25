@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	
+	int N,count=0;
+	cin >> N;
+	int num[N+2];
+	for(int i=1;i<=N;i++)
+	{
+		cin >> num[i];
+		if(num[i]!=i)
+			count++;
+	}
+	cout << count;
+	return 0;
+}

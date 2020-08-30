@@ -1,0 +1,23 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	
+	vector<pair<int,int> > point;
+	int N;
+	cin >> N;
+	for(int i=0;i<N;i++)
+	{
+		int a,b;
+		cin >> a >> b;
+		point.push_back(pair<int,int>(b,a));
+	}
+	sort(point.begin(),point.end());
+	for(int i=0;i<N;i++)
+		cout << point[i].second << " " << point[i].first << "\n";
+	return 0;
+}

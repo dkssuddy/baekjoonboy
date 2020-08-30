@@ -1,0 +1,25 @@
+#include <iostream>
+#include <functional>
+#include <algorithm>
+#include <vector>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	
+	vector<int> wood;
+	int N,ans=0;
+	cin >> N;
+	for(int i=0;i<N;i++)
+	{
+		int a;
+		cin >> a;
+		wood.push_back(a);
+	}
+	sort(wood.begin(),wood.end(),greater<int>());
+	for(int i=0;i<N;i++)
+		if(ans<wood[i]+i)
+			ans=wood[i]+i;
+	cout << ans+2;
+}

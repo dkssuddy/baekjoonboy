@@ -1,0 +1,30 @@
+#include <iostream>
+#include <algorithm>
+#include <cstring>
+#include <vector>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	
+	vector<pair<int,string> > v;
+	int N;
+	cin >> N;
+	for(int k=0;k<N;k++)
+	{
+		char name[51];
+		cin >> name;
+		int a= strlen(name);
+		v.push_back(pair<int,string>(a,name));
+	}
+	sort(v.begin(),v.end());
+	for(int i=0;i<N;i++)
+	{
+		if(i>0 && v[i].second==v[i-1].second)
+			continue;
+		else
+			cout << v[i].second << "\n";
+	}
+	return 0;
+}

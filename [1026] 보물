@@ -1,0 +1,33 @@
+#include <iostream>
+#include <algorithm>
+#include <functional>
+#include <vector>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	
+	vector <int> A,B;
+	int N,ans=0;
+	cin >> N;
+	for(int i=0;i<N;i++)
+	{
+		int a;
+		cin >> a;
+		A.push_back(a);
+	}
+	for(int k=0;k<N;k++)
+	{
+		int b;
+		cin >> b;
+		B.push_back(b);
+	}
+	sort(A.begin(),A.end());
+	sort(B.begin(),B.end(),greater<int>());
+	for(int p=0;p<N;p++)
+		ans += A[p]*B[p];
+	cout << ans;
+	
+	return 0;
+}
